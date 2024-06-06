@@ -1,22 +1,20 @@
 #!/bin/sh
 yum -y update && yum -y upgrade
-yum install net-tools wget -y 
-yum install screen -y 
-yum install bzip2 -y 
-yum install nano -y 
-yum install ufw -y 
-yum install vim -y 
-yum install cronie -y 
+yum install wget vim screen bzip2 nano net-tools cronie -y 
+yum install epel-release -y 
+yum install xrdp tigervnc-server -y 
+
+yum groupinstall -y "MATE Desktop" 
+systemctl stop firewalld
+systemctl disable firewalld
+localectl set-locale LANG=en_US.UTF-8
+
+systemctl enable xrdp
+systemctl start xrdp
 
 yum install samba-winbind-clients -y
 yum groupinstall 'Development Tools' -y
 yum install libjpeg-turbo-devel libtiff-devel freetype-devel -y
-yum install wget -y 
-yum install vim -y 
-yum install screen -y 
-yum install bzip2 -y 
-yum install nano -y 
-yum install net-tools -y 
 yum -y install glibc.i686
 yum -y install zlib.i686
 yum -y install libstdc++.i686
@@ -36,12 +34,5 @@ unzip phpMyAdmin-5.0.0-all-languages.zip
 mv phpMyAdmin-5.0.0-all-languages thuong
 systemctl start httpd
 systemctl enable httpd
-yum install -y epel-release
-yum install -y xrdp
-systemctl enable xrdp
-systemctl start xrdp
-yum groupinstall -y "MATE Desktop"
-systemctl stop firewalld
-systemctl disable firewalld
-localectl set-locale LANG=en_US.UTF-8
+
 reboot
