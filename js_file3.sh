@@ -9,4 +9,5 @@ wget https://github.com/thehuy0606/public_mission/blob/main/GMPassGen.exe
 wget https://github.com/thehuy0606/public_mission/blob/main/jx2ib_database_log_newsua.sql
 wget https://github.com/thehuy0606/public_mission/blob/main/jx2ib_database_new.sql
 wget https://github.com/thehuy0606/public_mission/blob/main/paysys.sql
+cd /root/Desktop
 
