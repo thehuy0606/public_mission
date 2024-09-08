@@ -1,5 +1,6 @@
 #!/bin/sh
 # https://tothost.vn/kien-thuc/cach-chay-minecraft-server-tren-vps-linux
+# https://minecraftvn.net/cach-tao-server-minecraft-va-cac-phan-co-ban-day-du-chi-tiet.t17940/
 yum -y update && yum -y upgrade
 yum install wget vim screen bzip2 nano net-tools cronie -y 
 yum install openjdk-17-jdk
