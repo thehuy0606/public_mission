@@ -25,3 +25,5 @@ vi server.properties
 
 # ần sửa cấu hình tường lửa một chút. Minecraft mặc định sử dụng cổng 25565, nghĩa là bạn sẽ cần thiết lập chuyển tiếp cổng cho 25565
 iptables -I INPUT -p tcp --dport 25565 -j ACCEPT
+
+java -Xms3072M -Xmx4096M -jar /root/minecraft2/forge-1.21.1-52.0.10-shim.jar nogui
