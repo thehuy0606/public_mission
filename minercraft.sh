@@ -3,8 +3,10 @@
 # https://minecraftvn.net/cach-tao-server-minecraft-va-cac-phan-co-ban-day-du-chi-tiet.t17940/
 yum -y update && yum -y upgrade
 yum install wget vim screen bzip2 nano net-tools cronie -y 
-wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
-sudo dpkg -i jdk-22_linux-x64_bin.deb
+# wget https://download.oracle.com/java/22/latest/jdk-22_linux-x64_bin.deb
+# sudo dpkg -i jdk-22_linux-x64_bin.deb
+wget https://download.oracle.com/java/22/archive/jdk-22.0.1_linux-x64_bin.rpm
+sudo yum localinstall jdk-22.0.1_linux-x64_bin.rpm
 
 mkdir Minecraft
 cd Minecraft
